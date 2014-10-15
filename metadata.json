@@ -1,0 +1,17 @@
+{
+  "name": "unicorn-pptp",
+  "version": "0.1.0",
+  "author": "Unicorn Telecom",
+  "summary": "Installation and management of pptp.",
+  "license": "Apache 2.0",
+  "source": "https://github.com/UnicornAB/pptp.git",
+  "project_page": "https://github.com/UnicornAB/pptp",
+  "issues_url": "https://github.com/UnicornAB/pptp/issues",
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_range": ">= 1.0.0"
+    }
+  ]
+}
+
