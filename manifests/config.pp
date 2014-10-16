@@ -11,7 +11,7 @@ class pptp::config inherits pptp {
     order => '01'
   }
 
-  file { $config_file:
+  file { $config_path:
     ensure  => file,
     owner   => 0,
     group   => 0,
@@ -26,13 +26,5 @@ class pptp::config inherits pptp {
     mode    => '0644',
     content => template($options_template),
   }
-/*
-  file { $secrets_path:
-    ensure  => file,
-    owner   => 0,
-    group   => 0,
-    mode    => '0644',
-    content => template($secrets_template),
-  }
-*/
+
 }

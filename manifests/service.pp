@@ -1,6 +1,6 @@
 #
 class pptp::service inherits pptp {
-
+/*
   if ! ($service_ensure in [ 'running', 'stopped' ]) {
     fail('service_ensure parameter must be running or stopped')
   }
@@ -14,5 +14,5 @@ class pptp::service inherits pptp {
       hasrestart => true,
     }
   }
-
+*/
 }

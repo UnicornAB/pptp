@@ -59,7 +59,7 @@ logwtmp
 #       If pptpd is allocating IP addresses (e.g. delegate is not
 #       used) then the number of connections is also limited by the
 #       remoteip option.  The default is 100.
-#connections 100
+connections <%= @connections %>
 
 # TAG: localip
 # TAG: remoteip
@@ -92,9 +92,5 @@ logwtmp
 #	   be set to the given one. You MUST still give at least one remote
 #	   IP for each simultaneous client.
 #
-# (Recommended)
-#localip 192.168.0.1
-#remoteip 192.168.0.234-238,192.168.0.245
-# or
-#localip 192.168.0.234-238,192.168.0.245
-#remoteip 192.168.1.234-238,192.168.1.245
+localip <%= @localip %>
+remoteip <%= @remoteip %>
