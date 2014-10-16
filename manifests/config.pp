@@ -1,5 +1,15 @@
-
+#
 class pptp::config inherits pptp {
+
+  concat { $secrets_path:
+    ensure => present
+  }
+
+  concat::fragment { 'secret_header':
+    target => $secrets_path,
+    content => template('pptp/chap-secrets-header.erb'),
+    order => '01'
+  }
 
   file { $config_file:
     ensure  => file,
@@ -16,7 +26,7 @@ class pptp::config inherits pptp {
     mode    => '0644',
     content => template($options_template),
   }
-
+/*
   file { $secrets_path:
     ensure  => file,
     owner   => 0,
@@ -24,5 +34,5 @@ class pptp::config inherits pptp {
     mode    => '0644',
     content => template($secrets_template),
   }
-
+*/
 }
