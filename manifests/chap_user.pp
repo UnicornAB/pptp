@@ -7,8 +7,8 @@ define pptp::chap_user (
 ) {
 
   concat::fragment { $name:
-    target => $secrets_path,
-    content => template($secrets_template),
+    target => $pptp::secrets_path,
+    content => template($pptp::secrets_template),
     order => '01'
   }
 }

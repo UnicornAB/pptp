@@ -1,6 +1,6 @@
 class pptp (
-  $localip          = $pptp::params::autoupdate,
-  $remoteip         = $pptp::params::config,
+  $localip          = $pptp::params::localip,
+  $remoteip         = $pptp::params::remoteip,
   $connections      = $pptp::params::connections,
   $ms_dns           = $pptp::params::ms_dns,
   $config_path      = $pptp::params::config_path,
