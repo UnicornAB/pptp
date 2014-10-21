@@ -1,7 +1,7 @@
 #
 define pptp::chap_user (
   $client = $name,
-  $server = 'pptp',
+  $server = 'pptpd',
   $secret = undef,
   $IP_addresses = '*'
 ) {
