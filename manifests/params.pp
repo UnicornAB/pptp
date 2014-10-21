@@ -12,6 +12,6 @@ class pptp::params {
   $secrets_template = 'pptp/chap-secrets.erb'
   $package_ensure   = present
 
-  $default_package_name = ['pptp']
+  $default_package_name = ['pptpd']
   $default_service_name = 'pptpd'
 }
